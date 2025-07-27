@@ -43,6 +43,7 @@ stdenv.mkDerivation (finalAttrs: {
     "-DREGEX_BACKEND=pcre2"
     "-DUSE_HTTP_PARSER=llhttp"
     "-DUSE_SSH=ON"
+    "-DEXPERIMENTAL_SHA256=ON"
     (lib.cmakeBool "USE_GSSAPI" withGssapi)
     "-DBUILD_SHARED_LIBS=${if staticBuild then "OFF" else "ON"}"
   ]
